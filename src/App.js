@@ -12,7 +12,6 @@ function App() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    console.log("Connecting to server: ", SERVER);
     const newSocket = io(SERVER, {
       transports: ["polling"],
     });
