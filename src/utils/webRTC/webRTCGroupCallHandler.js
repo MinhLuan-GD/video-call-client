@@ -25,8 +25,8 @@ let videoConstraints = {
 export const connectWithMyPeer = (roomId, type) => {
   myPeer = new window.Peer(undefined, {
     path: "/peerjs",
-    host: "/",
-    port: "5001",
+    host: process.env.REACT_APP_SERVER_HOST,
+    port: "443",
   });
 
   myPeer.on("open", (id) => {
